@@ -9,9 +9,9 @@ var listingData, server;
 var requestHandler = function(request, response) {
   var parsedUrl = url.parse(request.url);
 
-  if (parsedUrl.pathname == '/listings'){
+  if (parsedUrl.pathname == '/listings') {
     response.end(JSON.stringify(listingData))
-}
+  }
   else {
     response.writeHead(404)
     response.end('Bad gateway error')
@@ -50,7 +50,7 @@ fs.readFile('listings.json', 'utf8', function(err, data) {
 
    //Save the sate in the listingData variable already defined
   if (err) throw err;
-   listingData = JSON.parse(data)
+  listingData = JSON.parse(data)
  
   //Creates the server
   server = http.createServer(requestHandler);
