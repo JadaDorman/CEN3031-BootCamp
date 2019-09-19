@@ -26,19 +26,23 @@ var removeCable = function() {
     on cable TV. Since we live in the 21st century and most courses are now web based, go ahead
     and remove this listing from your database and log the document to the console. 
    */
-  Listing.findOneAndDelete( {name: 'CABL' }, (err,list) => {
+  Listing.findOneAndDelete( {code: 'CABL' }, (err,list) => {
     if(err) throw err;
     console.log(list);
-})
+  })
 };
 var updatePhelpsLab = function() {
   /*
     Phelps Lab address is incorrect. Find the listing, update it, and then 
     log the updated document to the console. 
-    
+  
     Correct Address: 1953 Museum Rd, Gainesville, FL 32603
 
    */
+  Listing.findOneAndUpdate( {code : 'PHL' }, {address : '1953 Museum Rd, Gainesville, FL 32603'}, (err,list) => {
+    if(err) throw err;
+    console.log(list);
+  })
 };
 var retrieveAllListings = function() {
   /* 
@@ -52,5 +56,5 @@ var retrieveAllListings = function() {
 
 findLibraryWest();
 removeCable();
-updatePhelpsMemorial();
+updatePhelpsLab();
 retrieveAllListings();
