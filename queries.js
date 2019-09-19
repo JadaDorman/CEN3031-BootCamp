@@ -31,10 +31,13 @@ var removeCable = function() {
     console.log(list);
 })
 };
-var updatePhelpsMemorial = function() {
+var updatePhelpsLab = function() {
   /*
-    Phelps Memorial Hospital Center's address is incorrect. Find the listing, update it, and then 
+    Phelps Lab address is incorrect. Find the listing, update it, and then 
     log the updated document to the console. 
+    
+    Correct Address: 1953 Museum Rd, Gainesville, FL 32603
+
    */
 };
 var retrieveAllListings = function() {
